@@ -1,0 +1,20 @@
+.grid_container {
+  display: grid; 
+  grid-gap: 2px;
+  margin-right: 10px;
+  position: fixed;
+  height: 99%;
+  width: 83%;
+  overflow-y: auto;
+}
+
+.grid_container_full {
+  display: grid; 
+  grid-gap: 2px;
+  margin-right: 10px;
+  position: fixed;
+  height: 99%;
+  width: 93%;
+}
+
+
