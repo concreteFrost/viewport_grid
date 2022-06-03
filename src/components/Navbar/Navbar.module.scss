@@ -5,33 +5,32 @@
   width: 16.5%;
 }
 
-.nav_hidden{
-  background-color: yellow;
-  height: 100%;
-  position: fixed;
-  width: 6.5%;
-  input{
-    display: none;
-  }
-  label{
-    display: none;
-  }
-  
-}
-
 .input {
   margin: 40px 10px;
 }
 
-.input input{
-    width: 90%;
+.input input {
+  width: 90%;
 }
 
-.toggle{
+.nav_hidden {
+  background-color: yellow;
+  height: 100%;
+  position: fixed;
+  width: 6.5%;
+  input {
+    display: none;
+  }
+  label {
+    display: none;
+  }
+}
+
+
+
+.toggle {
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 1000;
 }
-
-

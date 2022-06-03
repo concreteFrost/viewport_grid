@@ -1,9 +1,13 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { App } from "../App";
+import Navbar from './../components/Navbar/Navbar';
 
-test("Renders React App", () => {
-  render(<App />);
-  const element = screen.getByText("React App");
-  expect(element).toBeInTheDocument();
-});
+describe("App components",()=>{
+  test("Renders React App", () => {
+    render(<App />);
+    const element = screen.getByText("Rows")
+    expect(element).toBeInTheDocument();
+  });
+})
+
