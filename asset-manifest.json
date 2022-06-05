@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/viewport_grid/static/css/main.005dc469.css",
+    "main.js": "/viewport_grid/static/js/main.14713fd5.js",
+    "index.html": "/viewport_grid/index.html",
+    "main.005dc469.css.map": "/viewport_grid/static/css/main.005dc469.css.map",
+    "main.14713fd5.js.map": "/viewport_grid/static/js/main.14713fd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.005dc469.css",
+    "static/js/main.14713fd5.js"
+  ]
+}
