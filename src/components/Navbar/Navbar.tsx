@@ -18,15 +18,15 @@ const Navbar = (props: NavbarProps) => {
   const toggle = () => {
     //Hides the navbar component from the viewport
     isActive ? setIsActive(false) : setIsActive(true)
-
+    
     //Expands the grid if the navbar component was removed
     isActive ? props.setNavActive(false) : props.setNavActive(true)
   }
 
   return (
     <div>
-      <button className={s.toggle} onClick={toggle}>Click</button>
-      <div className={isActive ? s.nav : s.nav_hidden}>
+      <button role='toggler' className={s.toggle} onClick={toggle}>Click</button>
+      <div role="nav" className={isActive ? s.nav : s.nav_hidden}>
         <div className={s.input}>
           <Input id="rows" val={props.rows} title="Rows" setVal={props.setRows} />
           <Input id="cols" val={props.cols} title="Cols" setVal={props.setCols} />

@@ -34,7 +34,7 @@ const Input = (props: InputProps) => {
     return (
         <div>
             <label htmlFor={props.id}>{props.title}</label>
-            <input type="number" id={props.id} name={props.id} onChange={updateValue} value={props.val} />
+            <input role ='input' type="number" id={props.id} name={props.id} onChange={updateValue} value={props.val} />
         </div>
     )
 }

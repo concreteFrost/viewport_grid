@@ -7,7 +7,6 @@ type ViewProps = {
     gridRows: number,
     gridCols: number,
     navActive: boolean
-
 }
 
 const ViewPort = ({ gridRows, gridCols, navActive }: ViewProps) => {
@@ -29,7 +28,6 @@ const ViewPort = ({ gridRows, gridCols, navActive }: ViewProps) => {
     let res = [...Array(items)].map((e, i) => { return <Item key={i}></Item> })
 
     return <div className={s.container} >
-
         <div className={navActive ? s.grid_container : s.grid_container_full} ref={viewportRef}>
             {res}
         </div>

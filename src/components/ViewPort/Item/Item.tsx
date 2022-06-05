@@ -2,41 +2,28 @@ import React from "react";
 import s from "./Item.module.scss";
 import { useRef, useEffect, useState } from "react";
 
-const useContainerDimensions = myRef => {
-  const getDimensions = () => ({
-    width: myRef?.current?.offsetWidth,
-    height: myRef?.current?.offsetHeight
-  })
-
+export const useResizeObserver = ref =>{
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions(getDimensions())
+  useEffect(()=>{
+    const target = ref.current;
+    const observer = new ResizeObserver((entries)=>{
+     entries.forEach(e=>{setDimensions(e.contentRect)})  
+    })
+    observer.observe(target)
+    return()=>{
+      observer.unobserve(target)
     }
-
-    if (myRef.current) {
-      setDimensions(getDimensions())
-    }
-
-    window.addEventListener("change", handleResize)
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("change", handleResize)
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [myRef])
+  },[ref])
 
   return dimensions;
-};
+}
 
 const Item = () => {
   const componentRef = useRef()
-  const { width, height } = useContainerDimensions(componentRef)
+  const dimensions = useResizeObserver(componentRef)
   return (
-    <div ref={componentRef} className={s.container}>
-     <p>{width} x {height}</p>
+    <div role='item' ref={componentRef} className={s.container}>
+     <p>{Math.round(dimensions.width)} x {Math.round(dimensions.height)}</p>
      
     </div>
   )
