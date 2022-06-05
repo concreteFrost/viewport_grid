@@ -25,7 +25,7 @@ const Navbar = (props: NavbarProps) => {
 
   return (
     <div>
-      <button role='toggler' className={s.toggle} onClick={toggle}>Click</button>
+      <button role='toggler' className={s.toggle} onClick={toggle}><i className="fa-solid fa-bars"></i></button>
       <div role="nav" className={isActive ? s.nav : s.nav_hidden}>
         <div className={s.input}>
           <Input id="rows" val={props.rows} title="Rows" setVal={props.setRows} />

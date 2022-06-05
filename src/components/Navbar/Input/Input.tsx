@@ -9,7 +9,7 @@ type InputProps = {
 
 const Input = (props: InputProps) => {
     const [val, setVal] = useState(props.val);
-    
+
     //Keeps the value within the acceptable range
     const getValidValue = (value: number): number => {
 
@@ -34,7 +34,7 @@ const Input = (props: InputProps) => {
     return (
         <div>
             <label htmlFor={props.id}>{props.title}</label>
-            <input role ='input' type="number" id={props.id} name={props.id} onChange={updateValue} value={props.val} />
+            <input role='input' type="number" id={props.id} name={props.id} onChange={updateValue} value={props.val} />
         </div>
     )
 }

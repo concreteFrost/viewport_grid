@@ -1,36 +1,64 @@
 .nav {
   height: 100%;
-  background-color: yellow;
+  background-color: rgb(145, 145, 145);
   position: fixed;
   width: 16.5%;
+  color: rgb(255, 255, 255);
+  transition: width 0.2s;
 }
 
 .input {
-  margin: 40px 10px;
+  margin: 60px 10px;
 }
 
 .input input {
   width: 90%;
+  background-color: rgb(253, 231, 198);
+  border-radius: 3px;
+  border: 0.5px solid black;
 }
 
 .nav_hidden {
-  background-color: yellow;
+  
+  background-color: rgb(145, 145, 145);
   height: 100%;
   position: fixed;
   width: 6.5%;
+  
   input {
     display: none;
   }
   label {
     display: none;
   }
+  
 }
-
-
 
 .toggle {
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 1000;
+  background-color: rgba(255, 77, 0, 0.926);
+  border: 0.1px solid rgb(72, 71, 71);
+  border-radius: 3px;
+  width: 30px;
+  height: 25px;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.5s;
+  transition: color 0.2s;
+
+  &:hover{
+    background-color: rgb(117, 117, 117);
+    color: rgb(0, 0, 0);
+  }
+
+  &:active{
+    transition: color 0s;
+    background-color: rgb(158, 158, 158);
+    color: rgb(176, 176, 176);
+    border: 0;
+  }
+  
+
 }

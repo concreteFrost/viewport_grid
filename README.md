@@ -1,20 +1,11 @@
 # Viewport Grid
 
-## Task
+## How to use 
 
-Using the provided project template (based off create-react-app), create single page application that contains a uniform Grid of Viewports, with a fixed Sidebar. The Sidebar shall contain the inputs "Rows" and "Columns" both of which must be in the range of 1-10, and a button to collapse and expand the Sidebar. The Grid must show the defined number of "Rows" and "Columns", with a Viewport at each position. The Grid must fill remaining space and fit all Viewports equally, with a small gutter between them, and efficiently adapt to browser resizes and Sidebar collapsing/expanding. Each Viewport must have a thin border. Viewports must also be aware of their size at all times and be printed at its center.
-The example colours are just for reference and styling should be adjusted for a clean modern UX.
-
-### Example
-
-![](example.gif)
-
-### Constraints
-
-- Solution should be production quaility, documented, and reusable.
-- Solution should contain appropriate unit testing.
-- Solution should not require additional NPM packages.
-- Solution should work against the latest version of Chrome, Firefox and Edge
+This application accepts the input between 1 and 10 inclusive and displays\
+the calculated number of cells based on a provided value.The user can also\
+hide or show the navigation bar by pressing the orange button that is placed\ in
+the top left corner of the navigation bar.
 
 ## Requirements
 
@@ -22,6 +13,10 @@ The example colours are just for reference and styling should be adjusted for a 
 
 ## Running Development Mode
 
+Run this command before launching the App:
+### `npm i install`
+
+This command runs the App:
 ### `npm start`
 
 Runs the app in the development mode.\
